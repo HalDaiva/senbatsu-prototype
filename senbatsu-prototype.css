@@ -1,0 +1,343 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(Montserrat-Medium.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Ro GSan";
+    src: url(RoGSan-UltraBold.otf);
+    font-weight: 700;
+}
+
+body {
+    background-color: #212121;
+    font-family: "Montserrat";
+    color: white;
+    margin: 0;
+}
+
+i {
+    font-size: 24px;
+}
+
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #212121;
+    padding-inline: 32px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: calc(100vw - 64px);
+    justify-content: space-between;
+    /*background-color: #0a53be;*/
+}
+
+.navbarLeft {
+    display: flex;
+    gap: 28px;
+}
+
+.navbarRight {
+    display: flex;
+    gap: 28px;
+    flex-direction: row-reverse;
+}
+
+
+.navElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+}
+
+.searchBar {
+    display: flex;
+    padding-inline: 16px;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    height: 40px;
+    border-radius: 16px;
+    cursor: text;
+    color: #787878;
+}
+
+.fa-magnifying-glass {
+    font-size: 16px;
+}
+
+iframe {
+    width: 100vw;
+    height: 83vh;
+}
+
+.content {
+    margin-top: 64px;
+}
+
+.video-after-container{
+    padding-inline: 156px;
+    margin-top: 20px;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.video-after-left {
+    /*background-color: red;*/
+    flex: 3;
+}
+.video-after-right {
+    /*background-color: blue;*/
+    flex: 1;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.video-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.video-buttons-left{
+    display: flex;
+    gap: 12px;
+}
+
+.button {
+    font-family: Montserrat;
+    font-size: 16px;
+    color: white;
+    padding: 12px;
+    padding-inline: 16px;
+    background-color: #3C3C3C;
+    border-radius: 8px;
+    box-shadow: none;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 16px;
+}
+
+.button:hover, button:active {
+    background-color: #474747;
+}
+
+.video-details {
+    margin-top: 24px;
+    display: flex;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.video-details-left, .video-details-right {
+    flex: 1;
+}
+
+.video-details-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grey-text{
+    color: #929292 !important;
+}
+
+hr {
+    border: #2e2e2e 1px solid;
+}
+
+.video-details-tags {
+    display: flex;
+    margin-top: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.video-details-tags span {
+    padding: 6px;
+    background-color: #3C3C3C;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.comments-heading {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading-w-tags {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.heading{
+    font-family: "Ro GSan";
+    font-size: 1.5rem;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.heading::after {
+    content: '';
+    background-color: #F6007F;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(1);
+    transition: transform 0.3s;
+}
+
+.heading-tag {
+    font-family: "Ro GSan";
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 1rem;
+    background-color: #EDED00;
+    color: #212121;
+    height: 8px;
+    padding: 8px 6px;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.comments {
+    margin-top: 48px;
+}
+
+.comment {
+    margin-bottom: 32px;
+}
+
+.comment-header {
+    font-weight: 700;
+}
+
+.comment-body {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.comment-header i {
+    font-size: 1rem;
+    margin-left: 8px;
+    color: #EDED00;
+}
+
+.oshi {
+    padding: 6px;
+    background-color: #3C3C3C;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #b6b6b6;
+    margin-left: 8px;
+}
+
+.oshi::before {
+    content: "推 ";
+}
+
+.text-button {
+    font-family: Montserrat;
+    font-size: 1rem;
+    color: #CB96FF;
+    padding: 0px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 8px;
+    box-shadow: none;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.text-button:hover, .text-button:active {
+    color: #916bc3;
+}
+
+.reply {
+    padding-top: 20px;
+    padding-left: 32px;
+    border-left: #CB96FF solid 2px;
+}
+
+.reply-first {
+    margin-top: 20px;
+    padding-top: 0;
+}
+
+.guess-tag::before {
+    content: " - Guest";
+    font-weight: 400;
+    color: #929292;
+}
+
+.mention {
+    color: #EDED00;
+}
+
+.video-recommendation {
+    display: block;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.video-recommendation:hover, .video-recommendation:active {
+    background-color: #3C3C3C;
+}
+
+.thumbnail {
+    width: 100%;
+    background-image: url("https://i.okcdn.ru/videoPreview?id=417662700065&type=32&idx=2&tkn=y8nUB7MKmZJy0WpjmG4s-9pxLYE&fn=external_8");
+    background-size: cover;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+}
+
+.video-recommendation-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.video-recommendation-details {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 8px;
+
+}
+
