@@ -15,16 +15,23 @@
     src: url(RoGSan-UltraBold.otf);
     font-weight: 700;
 }
+* {
+    box-sizing: border-box;
+    /*border: red 1px solid;*/
+}
 
 body {
+    overflow-x: hidden;
     background-color: #212121;
     font-family: "Montserrat";
     color: white;
     margin: 0;
+    font-size: 0.875rem;
+    width: 100vw;
 }
 
 i {
-    font-size: 24px;
+    font-size: 1.3125rem;
 }
 
 
@@ -39,7 +46,7 @@ a:link, a:visited{
     display: flex;
     position: fixed;
     top: 0;
-    width: calc(100vw - 64px);
+    width: 100vw;
     justify-content: space-between;
     /*background-color: #0a53be;*/
 }
@@ -77,7 +84,7 @@ a:link, a:visited{
 }
 
 .fa-magnifying-glass {
-    font-size: 16px;
+    font-size: 0.875rem;
 }
 
 iframe {
@@ -90,7 +97,10 @@ iframe {
 }
 
 .video-after-container{
-    padding-inline: 156px;
+    max-width: 1500px;
+    margin-inline: auto;
+    width: 100%;
+    padding-inline: 100px;
     margin-top: 20px;
     display: flex;
     align-items: stretch;
@@ -102,12 +112,14 @@ iframe {
     flex: 3;
 }
 .video-after-right {
+    display: flex;
+    flex-direction: column;
     /*background-color: blue;*/
     flex: 1;
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     font-weight: 700;
 }
 
@@ -121,9 +133,14 @@ iframe {
     gap: 12px;
 }
 
+.video-buttons-right{
+    display: flex;
+    gap: 12px;
+}
+
 .button {
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 0.875rem;
     color: white;
     padding: 12px;
     padding-inline: 16px;
@@ -138,7 +155,7 @@ iframe {
 }
 
 button i {
-    font-size: 16px;
+    font-size: 0.875rem;
 }
 
 .button:hover, button:active {
@@ -146,7 +163,7 @@ button i {
 }
 
 .video-details {
-    margin-top: 24px;
+    margin-top: 32px;
     display: flex;
     justify-content: stretch;
     gap: 20px;
@@ -177,7 +194,7 @@ hr {
 }
 
 .video-details-tags span {
-    padding: 6px;
+    padding: 5px;
     background-color: #3C3C3C;
     border-radius: 8px;
     cursor: pointer;
@@ -198,7 +215,7 @@ hr {
 
 .heading{
     font-family: "Ro GSan";
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     position: relative;
     z-index: -1;
     display: flex;
@@ -223,7 +240,7 @@ hr {
     display: inline-flex;
     align-items: center;
     line-height: 1;
-    font-size: 1rem;
+    font-size: 0.875rem;
     background-color: #EDED00;
     color: #212121;
     height: 8px;
@@ -250,13 +267,13 @@ hr {
 }
 
 .comment-header i {
-    font-size: 1rem;
+    font-size: 0.875rem;
     margin-left: 8px;
     color: #EDED00;
 }
 
 .oshi {
-    padding: 6px;
+    padding: 5px;
     background-color: #3C3C3C;
     border-radius: 8px;
     cursor: pointer;
@@ -271,7 +288,7 @@ hr {
 
 .text-button {
     font-family: Montserrat;
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: #CB96FF;
     padding: 0px;
     background-color: rgba(0,0,0,0);
@@ -329,15 +346,102 @@ hr {
 }
 
 .video-recommendation-title {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 700;
     margin-top: 16px;
 }
 
 .video-recommendation-details {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 400;
     margin-top: 8px;
 
+}
+
+.separator {
+    display: none;
+}
+
+@media only screen and (max-width: 1430px) {
+    iframe {
+        width: 100vw;
+        height: auto;
+        aspect-ratio: 17 / 9;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .video-after-container{
+        flex-direction: column;
+    }
+    .video-after-right {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*align-items: start;*/
+        /*flex-wrap: nowrap;*/
+        /*flex-grow: 0;*/
+        /*max-width: fit-content;*/
+    }
+    .video-recommendation {
+        display: inline-block;
+        /*width: 30%;*/
+        max-width: 50%;
+    }
+    .thumbnail {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+    .searchBar {
+        width: 100%;
+    }
+    .navSearch {
+        flex-grow: 1;
+        width: 100%;
+        align-self: stretch;
+    }
+    .navbarLeft {
+        width: 100%;
+        padding-right: 28px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .video-after-container {
+        max-width: 640px;
+        padding-inline: 28px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .video-details {
+        flex-direction: column;
+        gap: 0;
+    }
+    .separator {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .video-recommendation {
+        max-width: 100%;
+        width: 100%;
+    }
+    .video-buttons {
+        flex-direction: column;
+    }
+    .video-buttons-left {
+        flex-direction: column;
+    }
+
+    .video-buttons-right {
+        flex-direction: column;
+        margin-top: 12px;
+    }
 }
 
